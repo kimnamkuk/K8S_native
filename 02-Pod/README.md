@@ -13,3 +13,9 @@ https://kubernetes.io/ko/docs/concepts/workloads/pods/pod-overview/
 2) Yaml 파일로 생성
   - 업로드 된 nginx-pod.yaml 파일 참조
   - kubectl apply -f nginx-pod.yaml 
+# 생성된 Pod 확인
+- kubectl get pod or po
+
+# 생성된 Pod 동작 확인
+- kubectl get po -o wide 
+
