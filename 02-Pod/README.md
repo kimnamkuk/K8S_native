@@ -22,6 +22,7 @@ https://kubernetes.io/ko/docs/concepts/workloads/pods/pod-overview/
 [root@kube-master nkkim]# kubectl get po  -o wide
 
 NAME    READY   STATUS    RESTARTS   AGE    IP            NODE          NOMINATED NODE   READINESS GATES
+
 nginx   1/1     Running   0          113s   10.233.90.8   kube-master   <none>           <none>
 
 - curl 10.233.90.8 
