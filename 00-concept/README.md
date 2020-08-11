@@ -22,6 +22,9 @@
         - 보통 HA 구성은 필수
 2. 워커 (Worker)
     1) Kubelet
-        - 컨테이너의 모든 정보를 API-Server에 전송합니다.
+        - 컨테이너의 모든 정보를 API-Server에 전송
         - Evicted Timeout 시간을 넘어서 API-Server와 통신을 하지 못하면, API-Server는 해당 노드가 죽었다고 판단, 해당 노드 컨테이너를 삭제 (Defalut 5m) 
     2) Kube-Proxy
+        - 각 워커노드에 실행되는 프록시 에이전트
+        - 서비스를 외부로 노출 시켰을 때, 해당 컨테이너가 어떤 노드에 있는 연결하는 역할
+        
