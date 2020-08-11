@@ -9,7 +9,7 @@
         - API-Server가 동작하지 않으면 서비스를 살아 있으나, 생성, 업데이트 등 상태 변화에 따른 처리를 하지 못함
     2) Kube-Scheduler
         - 컨테이너를 생성하면 Pod를 어디에 배포할지 감지 및 결정함
-        - 스케쥴링 결정 사항은 리소스 (CPU, MEM), Quta, affinity, anti-affiniy 등 
+        - 스케쥴링 결정 사항은 리소스 (CPU, MEM), Quota, affinity, anti-affiniy 등 
     3) Kube-Controller
         - 각 Components 구성됨 
         - 노드 컨트롤러: 노드가 다운되었을 때, 통지 및 대응에 관한 책임짐
