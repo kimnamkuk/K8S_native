@@ -1,6 +1,0 @@
-POD란 무엇인가?
-- 파드 는 쿠버네티스 애플리케이션의 기본 실행 단위이다
-- 파드 는 단일 컨테이너만 동작하는 파드와 함께 동작하는 작업이 필요한 다중 컨테이너가 동작하는 파드가 있습니다.
-![pod](https://d33wubrfki0l68.cloudfront.net/fe03f68d8ede9815184852ca2a4fd30325e5d15a/98064/docs/tutorials/kubernetes-basics/public/images/module_03_pods.svg "pod")
-
-https://kubernetes.io/ko/docs/concepts/workloads/pods/pod-overview/
