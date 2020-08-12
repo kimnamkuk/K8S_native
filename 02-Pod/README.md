@@ -7,12 +7,12 @@ https://kubernetes.io/ko/docs/concepts/workloads/pods/pod-overview/
 
 # 2.Pod 생성 방법 
 1) kubectl 명령어로 생성
-  - kubectl run nginx --image=nginx [ deprecated v1.15 ]
-  - kubectl run nginx --generator=run-pod/v1 --image=nginx [ must use after v1.15 ]
-  
+  - kubectl run nginx --image=nginx 
+   
 2) Yaml 파일로 생성
   - 업로드 된 nginx-pod.yaml 파일 참조
   - kubectl apply -f nginx-pod.yaml 
+  
 # 3.생성된 Pod 확인
 - kubectl get pod or po
 
