@@ -29,3 +29,40 @@ NAME|                   READY|   STATUS|    RESTARTS|   AGE
 ----|------------------------|---------|------------|------
 nginx-f89759699-9x2f8|   1/1|     Running|   0|          14m
 
+# 4. 동작확인
+- Deployments를 생성했지만, 결국은 동작확인은 Pod로 해야합니다.
+- kubectl get po -o wide 
+
+[root@kube-master]# kubectl get po -o wide
+NAME|                    READY|   STATUS|    RESTARTS|   AGE|    IP|             NODE
+----|-------------------------|---------|------------|------|------|-----------------
+nginx-f89759699-9x2f8|   1/1|     Running|   0|          96m|    10.233.82.32|   node01   
+
+- curl 10.233.82.32
+
+[root@kube-master]# curl 10.233.82.32
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
