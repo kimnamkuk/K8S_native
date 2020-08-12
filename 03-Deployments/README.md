@@ -9,7 +9,7 @@
 
 # 2.Deployments 생성 방법
 1) kubectl 명령어로 생성
-  - kubectl run nginx --images=nginx [ must use after v1.15 ]
+  - kubectl run nginx --image=nginx [ must use after v1.15 ]
 2) Yaml 파일로 생성  
   - 업로드 된 nginx-deploy.yaml 파일 참조
   - kubectl apply -f nginx-deploy.yaml
