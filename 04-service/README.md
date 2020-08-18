@@ -8,3 +8,9 @@
 ![Service](https://d33wubrfki0l68.cloudfront.net/cc38b0f3c0fd94e66495e3a4198f2096cdecd3d5/ace10/docs/tutorials/kubernetes-basics/public/images/module_04_services.svg)
 
 # 2. 어떤 방법으로 Pod를 외부로 노출 시키나?
+   - Labels을 이용해서 같은 서비스로 정의하고, 외부로 노출 시킵니다.
+   - Labels은 Key, value로 구성이 되어 있고, key,value는 임의값으로 지정 할 수 있다.
+   
+   ![labels](https://d33wubrfki0l68.cloudfront.net/b964c59cdc1979dd4e1904c25f43745564ef6bee/f3351/docs/tutorials/kubernetes-basics/public/images/module_04_labels.svg)
+   
+   - Q. 1개의 svc를 접속 했을 때, Deployments를 통해 생성 된 Pod가 echo test 를 찍는다. 새로운 Pod를 생생 해서 echo test, echo test2를 찍는 결과 값을 
