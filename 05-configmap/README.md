@@ -13,5 +13,5 @@
   
 # 3. Configmap
   - K8s에서는 설정값을 관리용으로  Configmap을 제공합니다.
-  - Configmap은 Read-Only 이기에 컨테이너 내부에서 변경은 불가합니다. (이유는, "불변 인프라" 이기 떄문입니다)
+  - Configmap은 Read-Only 이기에 컨테이너 내부에서 변경은 불가합니다. (이유는, "불변 인프라" 이기 문입니다)
   - 설정 값이 변경 되면, Configmap 변경 후 Pod Restart 하면 해당 설정 값이 적용됩니다.
