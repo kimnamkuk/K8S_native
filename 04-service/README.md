@@ -13,4 +13,11 @@
    
    ![labels](https://d33wubrfki0l68.cloudfront.net/b964c59cdc1979dd4e1904c25f43745564ef6bee/f3351/docs/tutorials/kubernetes-basics/public/images/module_04_labels.svg)
    
-   - Q. 1개의 svc를 접속 했을 때, Deployments를 통해 생성 된 Pod가 echo test 를 찍는다. 새로운 Pod를 생생 해서 echo test, echo test2를 찍는 결과 값을 
+   - Q. 1개의 svc를 접속 했을 때, Deployments를 통해 생성 된 nginx Pod index 페이지를 프린트 합니다. 새로운 apache Pod를 생생 nginx, apache index 페이지를 번갈아 가면서 프린트 하도록 컨테이너 및 서비스를 구성하세요. 
+
+# 3. Endpoints 
+    - Pod의 Label과 Svc Label를 적절하게 연결이 되면 pod - endpoints - svc 로 연결이 됩니다. 
+    - Endpoint는 끝점으로 외부에서 서비스를 통해 들어왔을 때 어떤 Pod로 연결될 지를 정의해 줍니다.
+    - 위의 서비스가 번갈아 nginx, apache 메인 페이지를 프린트 하는 것도 endpoints에 nginx, apache 컨테이너 ip가 mapping 되어 있기 때문입니다.
+    
+    ![endpoints](https://i.stack.imgur.com/9RyYS.png) 
