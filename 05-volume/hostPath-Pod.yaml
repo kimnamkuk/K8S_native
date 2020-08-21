@@ -1,0 +1,18 @@
+piVersion: v1
+kind: Pod
+metadata:
+  name: test-pd
+spec:
+  containers:
+  - image: nginx
+    name: test-container
+    volumeMounts:
+    - mountPath: /test-pd
+      name: test-volume
+  volumes:
+  - name: test-volume
+    hostPath:
+      # 호스트의 디렉터리 위치
+      path: /data
+      # 이 필드는 선택 사항이다
+      type: Directory
