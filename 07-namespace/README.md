@@ -11,3 +11,5 @@
   - native 에서 제공하는 Resource Quota 설정은 CPU, MEM, storage만 제공합니다. 
   - resource quota에는 request, limit 항목이 존재하고, request는 Pod가 어떤 Node에 생성 될 때 최소한에 요구되는 자원량을 나타내고, Limit은 Pod가 사용할 수 있는 자원 최대치를 의미합니다
   - Pod가 Limit을 넘어서 자원을 사용하려고 하면 해당 노드의 Kernel이 컨테이너내에서 사용하는 APP을 Process Kill을 하여 자원을 확보 합니다.
+
+  https://kubernetes.io/ko/docs/concepts/policy/resource-quotas/
