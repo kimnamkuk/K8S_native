@@ -19,6 +19,7 @@
 # 4. PV, PVC
 
 ![pvpvc](https://miro.medium.com/max/700/1*DE9B97u63yfk6hntSbF5kQ.png) 
+
 참고: https://medium.com/@preiner/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-state-pod%EC%97%90-%ED%95%84%EC%9A%94%ED%95%9C-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80-storage-%EC%84%A4%EC%A0%95-6280f025a008
   
   - 컨테이너에서 볼륨을 사용시 pv,pvc를 만들어고 해당 pvc를 컨테이너에서 마운트 합니다.
