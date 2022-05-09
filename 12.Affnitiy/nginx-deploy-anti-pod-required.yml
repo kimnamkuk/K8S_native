@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-nginx-required-anti-pod
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+      type: required
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+        type: required
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: type
+                operator: In
+                values:
+                - required
+            topologyKey: kubernetes.io/hostname #topologyKey 는 노드 레이블의 키다. 만약 두 노드가 이 키로 레이블이 지정되고, 레이블이 동일한 값을 가진다면 스케줄러는 두 노드를 같은 토폴로지에 있는것으로 여기게 된다. 스케줄러는 각 토폴로지 도메인에 균형잡힌 수의 파드를 배치하려고 시도한다.
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+

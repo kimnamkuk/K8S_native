@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: ds-nginx
+  #namespace: diamanti-system
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        imagePullPolicy: IfNotPresent
+        # volumeMounts:
+        # - mountPath: /registration
+        #   name: registration-dir
+      hostNetwork: true
+      # volumes:
+      # - hostPath:
+      #     path: /var/lib/kubelet/plugins_registry
+      #     type: DirectoryOrCreate
+      #   name: registration-dir
